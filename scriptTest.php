@@ -1,4 +1,8 @@
 <?php
+/*
+fichier : script2.php sert à se connecter au serveur FTP distant, modifier le fichier .htaccess, modifier le fichier wp-config.php, modifier le fichier .SQL et par la suite creer une base de donnée.
+*/
+
 //******************************** connexion FTP *****************************/ 
 $ftp_server = "reblochon.o2switch.net";
 $ftp_user_name = "djiboutea";
@@ -16,28 +20,7 @@ $distant_path = "/public_html/webosity.fr/stargate";
 $fichier = $_SERVER['SCRIPT_FILENAME'];
 //******************************** fin connexion FTP *****************************/
 
-//******************************* mes déclarations de variables *******************************/
-// -------> fichier htaccess----//
-$fichier_htaccess = $local_path . "/" . ".htaccess"; 
-// -------> fichier wp-config----//
-$fichier_wp_config = $local_path . "/" . "wp-config.php"; 
-// -------> fichier sql----//
-$fichier_sql = $local_path . "/" . "dev_stargate.sql"; 
-// -------> la nouvelle chaine de caractère dans le fichier .sql ----// 
-$new_prefixe = $_POST['newprefixe'];
-// -------> nouveau nom du fichier sql ----// 
-$nouveau_nom_sql = $_POST['newname_sql']; 
 
-$dbname = $_POST['nombase']; // -------> nom de la base de données ----//
-$host = $_POST['nomhost'];  // -------> nom de l'hôte ----//    
-$user = $_POST['userbase']; // -------> nom de l'utilisateur ----//
-$password = empty($_POST['passwordbase']) ? "" : $_POST['passwordbase']; // -------> nouveau mot de passe ----//
-$define1 = "define( 'DB_NAME',";
-$define2 = "define( 'DB_USER',";
-$define3 = "define( 'DB_PASSWORD',";
-$define4 = "define( 'DB_HOST',";
-
-//******************************* mes fonctions *******************************/
 /*----------------FONCTION copyFTP()----------------------
 Le but de cette fonction est de recopier l'intégralité d'un répertoire distant
 et de tout ses fichiers et sous dossiers de manière récursive
@@ -60,13 +43,36 @@ function copyFTP($distant_path, $local_path, $conn_id)
                 mkdir($local_path . '/' . $elt['name'], 0777, true) or die('dossier déjà existant');
                 copyFTP($distant_path . '/' . $elt['name'], $local_path . '/' . $elt['name'], $conn_id);
                 //******* si fichier Parent ou commun on traite pas ******/
+
             }
         }
     }
 }
 copyFTP($distant_path, $local_path, $conn_id);
-echo "STEP1: copyFTP <br>";
+
+
+
+//******************************* mes déclarations de variables *******************************/
+$fichier_htaccess = $local_path . "/" . "htaccess"; // -------> fichier htaccess----//
+
+$fichier_wp_config = $local_path . "/" . "wp-config.php"; // -------> fichier wp-config----//
+
+$fichier_sql = $local_path . "/" . "dev_stargate.sql"; // -------> fichier sql----//
+$prefixe_bdd = $_POST['préfixe']; // -------> chaine de caractère à remplacer dans le fichier .sql ----//
+$new_prefixe = $_POST['newprefixe']; // -------> la nouvelle chaine de caractère dans le fichier .sql ----// 
+$nouveau_nom_sql = $_POST['newname_sql']; // -------> nouveau nom du fichier sql ----//
+
+$dbname = $_POST['nombase']; // -------> nom de la base de données ----//
+$host = $_POST['nomhost'];  // -------> nom de l'hôte ----//    
+$user = $_POST['userbase']; // -------> nom de l'utilisateur ----//
+$password = empty($_POST['passwordbase']) ? "" : $_POST['passwordbase']; // -------> nouveau mot de passe ----//
+
+
+
+
+
 //*************************************** Fonction modification d'une chaine de caractère fichier .htaccess ********************//
+
 function get_htaccess_content($fichier_htaccess)
 {
     $prefixe = "dev/stargate/"; // -------> chaine de caractère à remplacer ----//
@@ -84,8 +90,16 @@ function get_htaccess_content($fichier_htaccess)
     }
 }
 get_htaccess_content($fichier_htaccess); // -------> appel de la fonction htaccess ----//
-echo "STEP2: get_htaccess <br>";
+
+
+
+
+
+
+
+
 //*************************************** Fonction modification d'une chaine de caractère fichier wp-config ********************//
+
 
 function get_wp_config_content($fichier_wp_config, $new_prefixe)
 {
@@ -107,14 +121,13 @@ function get_wp_config_content($fichier_wp_config, $new_prefixe)
     } catch (Exception $e) {
         echo 'Exception reçue : ',  $e->getMessage(), "\n";
     }
-	if($prefixe[1]!=""){
-		return($prefixe[1]);
-	}else{
-		return(FALSE);
-	}
 }
-$prefixe = get_wp_config_content($fichier_wp_config, $new_prefixe);
-echo "STEP3: get_wp_config <br>";
+get_wp_config_content($fichier_wp_config, $new_prefixe);
+
+
+
+
+
 //*************************************** Fonction modification d'une chaine de caractère fichier .sql ********************//
 
 function get_sql_content($fichier_sql, $prefixe_bdd, $prefixe_choisi, $nouveau_nom_sql)
@@ -131,11 +144,15 @@ function get_sql_content($fichier_sql, $prefixe_bdd, $prefixe_choisi, $nouveau_n
         $_SESSION['erreur'] = 'problème de modification';
     }
 }
-if($prefixe!=FALSE){
-	get_sql_content($fichier_sql, $prefixe, $new_prefixe, $nouveau_nom_sql); // -------> appel de la fonction get_sql_content() ----//
-}
-echo "STEP4: get_get_sql <br>";
+get_sql_content($fichier_sql, $prefixe_bdd, $new_prefixe, $nouveau_nom_sql); // -------> appel de la fonction get_sql_content() ----//
+
+
+
+
+
+
 //*************************************** Fonction excution de la création de la base de donnée ********************//
+
 function create_database($fichier_sql, $dbname, $host, $user, $password)
 {
     $mysqli = new mysqli($host, $user, $password, $dbname); // -------> connexion à la base de données ----//
@@ -150,63 +167,15 @@ function create_database($fichier_sql, $dbname, $host, $user, $password)
 
     $mysqli->close(); // -------> ferme la connexion à la base de données ----//
 }
-$fichier_sql = $local_path."/".$nouveau_nom_sql;
-create_database($fichier_sql, $dbname, $host, $user, $password); // -------> appel de la fonction create_database ----//
-echo "STEP5: create_database <br>";
+create_database($fichier_sql, $dbname, $host, $user, $password); // -------> appel de la fonction sql_exec() ----//
 
 
-//*************************************** mise à jour du fichier wp_config_bdd ********************//
-/*----------------update_wp_config_bdd_const()----------------------
- à pour but de mettre à jour le fichier wp-config_bdd.php avec les nouvelles valeurs de la base de données
-*/
-function update_wp_config_bdd_const($fichier_wp_config, $new_param, $define_old_param)
-{
-    try {
-        //******************************** ouvre et lit dans le fichier *****************************// 
-        $current = file($fichier_wp_config); // -------> recopie l'integralité du fichier dans la variable $current ----//
-        $new_file = "";
-        foreach ($current as $line) {
-            if (strpos($line,  $define_old_param) !== false) {               
-                $dpname = explode("'", $line); // -------> explode la chaine de caractère à partir du simple quote ----//
-                $new_line = str_replace($dpname[3], $new_param, $line); // -------> remplace la chaine de caractère par la nouvelle a partir de l'explode simple quote ----//
-                $line = $new_line; // -------> remplace la ligne par la nouvelle ligne ----//
-            }
-            $new_file .= $line; // -------> concatène la nouvelle ligne à la variable $new_file ----//
-        }
-        // -------> fait la réecriture dans le fichie_wp_config ----//
-        file_put_contents($fichier_wp_config, $new_file);
-    } catch (Exception $e) {
-        echo 'Exception reçue : ',  $e->getMessage(), "\n";
-    }
-    if ($dpname[3] != "") {
-        return ($dpname[3]);
-    } else {
-        return (FALSE);
-    }
-}
- // -------> appel de la fonction update_wp_config_bdd_const() ----//
-update_wp_config_bdd_const($fichier_wp_config, $dbname, $define1);
-update_wp_config_bdd_const($fichier_wp_config, $user, $define2);
-update_wp_config_bdd_const($fichier_wp_config, $password, $define3);
-update_wp_config_bdd_const($fichier_wp_config, $host, $define4);
-echo "STEP6: update_wp_config_bdd_const <br>";  
 
 
-//***************************************si les fichiers nommés existe ils seront supprimés définitivement ********************//
-if (file_exists($nouveau_nom_sql)) {
-	unlink($nouveau_nom_sql);
-	echo "SUPPR : ".$nouveau_nom_sql." <br>";
-}
-if (file_exists("dev_stargate.sql")) {
-	unlink("dev_stargate.sql");
-	echo "SUPPR : dev_stargate.sql <br>";
-}
-if (file_exists("index2.php")) {
-	unlink("index2.php");
-	echo "SUPPR : index2.php <br>";
-}
+//***************** condition qui permet de supprimer le script en cours une fois exécuté **************/
+
+//*
 if (file_exists($fichier)) {
-	unlink($fichier);
-	echo "SUPPR : ".$fichier." <br>";
+    unlink($fichier);
 }
-echo "FIN PROCESS DUPPLICATION SITE :)";
+//*/ ---> sert à commenter la ligne si on veut garder le script en cours après exécution --------//
