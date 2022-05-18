@@ -1,0 +1,499 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bazooka Shopping\n"
+"POT-Creation-Date: 2020-11-25 16:39+0100\n"
+"PO-Revision-Date: 2020-11-25 16:39+0100\n"
+"Last-Translator: \n"
+"Language-Team: https://bazooka.tech/\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: library\n"
+"X-Poedit-SearchPathExcluded-1: css\n"
+"X-Poedit-SearchPathExcluded-2: img\n"
+"X-Poedit-SearchPathExcluded-3: js\n"
+
+#: bazooka-shopping.php:52 includes/bazooka-shopping-widget.php:9
+msgid "Automatic generation of affiliate links easily and effortlessly."
+msgstr ""
+"Génération automatique de liens d'affiliation facilement et sans effort."
+
+#: bazooka-shopping.php:54
+msgid "Kelkoo"
+msgstr "Kelkoo"
+
+#: bazooka-shopping.php:55 bazooka-shopping.php:718
+msgid "Amazon"
+msgstr "Amazon"
+
+#: bazooka-shopping.php:56 bazooka-shopping.php:913
+msgid "eBay"
+msgstr "eBay"
+
+#: bazooka-shopping.php:57 bazooka-shopping.php:1030
+msgid "Gearbest"
+msgstr "Gearbest"
+
+#: bazooka-shopping.php:59
+msgid "ManoMano FR (Awin)"
+msgstr "ManoMano"
+
+#: bazooka-shopping.php:62
+msgid "Grid (multi-column)"
+msgstr "Grille (multi-colonnes)"
+
+#: bazooka-shopping.php:63
+msgid "Box (full width)"
+msgstr "Boîte (pleine largeur)"
+
+#: bazooka-shopping.php:74 bazooka-shopping.php:149 views/products/box.php:1
+#: views/products/grid.php:1
+msgid "View Offer"
+msgstr "Voir l'offre"
+
+#: bazooka-shopping.php:109
+msgid "License Key"
+msgstr "Clé de licence"
+
+#: bazooka-shopping.php:114
+msgid "Activate my license"
+msgstr "Activer ma licence"
+
+#: bazooka-shopping.php:115
+#, php-format
+msgid ""
+"Enter your license key to receive automatic updates. If your license key has "
+"expired, <a href=\"%s\" target=\"_blank\">please renew it</a>."
+msgstr ""
+"Saisissez votre clé de licence pour recevoir les mises à jour automatiques. "
+"Si elle est expirée, <a href=\"%s\" target=\"_blank\">veuillez la "
+"renouveler</a>."
+
+#: bazooka-shopping.php:118 bazooka-shopping.php:335
+msgid "Settings"
+msgstr "Réglages"
+
+#: bazooka-shopping.php:119
+msgid "Automatic mode"
+msgstr "Mode automatique"
+
+#: bazooka-shopping.php:120
+#, php-format
+msgid "Automatically display products BEFORE the content of all %s ?"
+msgstr ""
+"Afficher automatiquement des produits AVANT le contenu de tous les %s ?"
+
+#: bazooka-shopping.php:121 bazooka-shopping.php:125
+msgid "posts"
+msgstr "articles"
+
+#: bazooka-shopping.php:122 bazooka-shopping.php:126
+msgid "pages"
+msgstr "pages"
+
+#: bazooka-shopping.php:124
+#, php-format
+msgid "Automatically display products AFTER the content of all %s ?"
+msgstr ""
+"Afficher automatiquement des produits APRÈS le contenu de tous les %s ?"
+
+#: bazooka-shopping.php:128
+msgid ""
+"Excluding homepage and legal notice. The title of {article|page} will be "
+"used to search for products."
+msgstr ""
+"Hors page d'accueil et mentions légales. Le titre de {l'article|la page} "
+"sera utilisé pour chercher des produits."
+
+#: bazooka-shopping.php:130
+msgid "Number of products"
+msgstr "Nombre de produits"
+
+#: bazooka-shopping.php:132
+msgid ""
+"The number of products displayed by default in automatic mode or if the "
+"attribute <code>count</code> is not specified in the shortcode."
+msgstr ""
+"Le nombre de produits affichés par défaut en mode automatique ou si "
+"l'attribut <code>count</code> n'est pas spécifié dans le shortcode."
+
+#: bazooka-shopping.php:134
+msgid "List design"
+msgstr "Design de la liste"
+
+#: bazooka-shopping.php:142
+msgid ""
+"The style used by default in automatic mode or if the attribute "
+"<code>template</code> is not specified in the shortcode."
+msgstr ""
+"Le style utilisé par défaut en mode automatique ou si l'attribut "
+"<code>template</code> n'est pas spécifié dans le shortcode."
+
+#: bazooka-shopping.php:144
+msgid "Colour of the list"
+msgstr "Couleur de la liste"
+
+#: bazooka-shopping.php:148
+msgid "Call to action button text"
+msgstr "Texte du bouton d'appel à l'action"
+
+#: bazooka-shopping.php:151
+msgid "Structured data"
+msgstr "Données structurées"
+
+#: bazooka-shopping.php:152
+#, php-format
+msgid ""
+"Add markup to your product pages so Google can provide detailed product "
+"information in %srich Search results%s."
+msgstr ""
+"Ajouter des balises à vos pages produit afin que Google puisse fournir des "
+"informations détaillées sur ce que vous vendez dans des %srésultats de "
+"recherche enrichis%s."
+
+#: bazooka-shopping.php:154
+msgid "Cloaked redirection"
+msgstr "Redirection cloakée"
+
+#: bazooka-shopping.php:155
+msgid ""
+"On every page where there are products, visitors (except robots) will be "
+"redirected to the first product displayed."
+msgstr ""
+"Sur chaque page où il y a des produits, les visiteurs (sauf les robots) "
+"seront redirigés vers le premier produit affiché."
+
+#: bazooka-shopping.php:159
+msgid ""
+"<a href=\"https://publisher.kelkoo.com/app/api-credentials\" target=\"_blank"
+"\">Get your Kelkoo API credentials</a>"
+msgstr ""
+"<a href=\"https://publisher.kelkoo.com/app/api-credentials\" target=\"_blank"
+"\">Obtenir vos identifiants API Kelkoo</a>"
+
+#: bazooka-shopping.php:161 bazooka-shopping.php:244
+msgid "Country"
+msgstr "Country"
+
+#: bazooka-shopping.php:164 bazooka-shopping.php:198
+msgid "Tracking ID"
+msgstr "Tracking ID"
+
+#: bazooka-shopping.php:167
+msgid "Secret Key"
+msgstr "Secret Key"
+
+#: bazooka-shopping.php:172
+msgid ""
+"<a href=\"https://affiliate-program.amazon.com/home/account/tag/manage\" "
+"target=\"_blank\">Get your Amazon Tracking ID</a> | <a href=\"https://"
+"affiliate-program.amazon.com/assoc_credentials/home\" target=\"_blank\">Get "
+"your Amazon API credentials</a>"
+msgstr ""
+"<a href=\"https://associates.amazon.ca/home/account/tag/manage\" target="
+"\"_blank\">Obtenir votre ID de suivi Amazon</a> | <a href=\"https://"
+"associates.amazon.ca/assoc_credentials/home\" target=\"_blank\">Obtenir vos "
+"identifiants API Amazon</a>"
+
+#: bazooka-shopping.php:174 bazooka-shopping.php:215
+msgid "Marketplace"
+msgstr "Marketplace"
+
+#: bazooka-shopping.php:201 bazooka-shopping.php:275
+msgid "API Key"
+msgstr "API Key"
+
+#: bazooka-shopping.php:204 bazooka-shopping.php:278
+msgid "API Secret"
+msgstr "API Secret"
+
+#: bazooka-shopping.php:207
+msgid "Tracking ID \"guest\""
+msgstr "Tracking ID \"invité\""
+
+#: bazooka-shopping.php:209
+msgid ""
+"Optional. Allows you to assign clicks to another Amazon account than the one "
+"used by the API."
+msgstr ""
+"Optionnel. Permet d'attribuer les clics à un autre compte Amazon que celui "
+"utilisé par l'API."
+
+#: bazooka-shopping.php:213
+msgid ""
+"<a href=\"https://partner.ebay.com/\" target=\"_blank\">Get your eBay "
+"Partner Network credentials</a>"
+msgstr ""
+"<a href=\"https://partner.ebay.com/\" target=\"_blank\">Obtenir vos "
+"identifiants eBay Partner Network</a>"
+
+#: bazooka-shopping.php:237
+msgid "Campaign ID"
+msgstr "Campaign ID"
+
+#: bazooka-shopping.php:242
+msgid ""
+"<a href=\"https://affiliate.gearbest.com/key\" target=\"_blank\">Get your "
+"Gearbest API credentials</a> | <a href=\"https://gearbestassociate.com/tips-"
+"to-get-links/\" target=\"_blank\">Get your Gearbest Link ID</a>"
+msgstr ""
+"<a href=\"https://affiliate.gearbest.com/key\" target=\"_blank\">Obtenir vos "
+"identifiants API Gearbest</a> | <a href=\"https://gearbestassociate.com/tips-"
+"to-get-links/\" target=\"_blank\">Obtenir votre Link ID Gearbest</a>"
+
+#: bazooka-shopping.php:272
+msgid "Link ID"
+msgstr ""
+
+#: bazooka-shopping.php:293
+msgid ""
+"<a href=\"https://ui.awin.com/user/settings/accounts\" target=\"_blank\">Get "
+"your Awin credentials</a>"
+msgstr ""
+"<a href=\"https://ui.awin.com/user/settings/accounts\" target=\"_blank"
+"\">Obtenir vos identifiants Awin</a>"
+
+#: bazooka-shopping.php:295
+msgid "Awin Program"
+msgstr "Programme Awin"
+
+#: bazooka-shopping.php:310
+msgid "Publisher ID"
+msgstr "Publisher ID"
+
+#: bazooka-shopping.php:317 bazooka-shopping.php:318 bazooka-shopping.php:349
+#: includes/bazooka-shopping-widget.php:7 views/options_page.php:3
+msgid "Bazooka Shopping"
+msgstr "Bazooka Shopping"
+
+#: bazooka-shopping.php:417 bazooka-shopping.php:432
+msgid "An error occurred while activating your license, please try again."
+msgstr ""
+"Une erreur est survenue lors de l'activation de votre licence, veuillez "
+"réessayer."
+
+#: bazooka-shopping.php:425
+msgid "Your license key is invalid."
+msgstr "Votre clé de licence est invalide."
+
+#: bazooka-shopping.php:426
+msgid "Your license key has expired, please renew it."
+msgstr "Votre clé de licence est expirée, veuillez la renouveler."
+
+#: bazooka-shopping.php:427
+msgid "Your license key has reached its activation limit."
+msgstr "Votre clé de licence a atteint sa limite d'activation."
+
+#: bazooka-shopping.php:429
+msgid "Your license key is deactivated."
+msgstr "Votre clé de licence est désactivée."
+
+#: bazooka-shopping.php:431
+msgid "Your license key is not active for this site."
+msgstr "Votre clé de licence n'est pas active pour ce site."
+
+#: bazooka-shopping.php:438
+#, php-format
+msgid "Your license key has been activated for the %s site."
+msgstr "Votre clé de licence a été activée pour le site %s."
+
+#: bazooka-shopping.php:456
+#, php-format
+msgid ""
+"<strong>Bazooka Shopping</strong> is installed. Please <a href=\"%s\">add "
+"your license key</a> to activate automatic updates."
+msgstr ""
+"<strong>Bazooka Shopping</strong> est installé. Veuillez <a href=\"%s"
+"\">ajouter votre clé de licence</a> pour activer les mises à jour "
+"automatiques."
+
+#: bazooka-shopping.php:1217
+msgid "ManoMano"
+msgstr "ManoMano"
+
+#: views/help.php:1
+msgid ""
+"Use the shortcode <code>[bzkshopping]</code> in the body of an article, page "
+"or widget to display products automatically based on context."
+msgstr ""
+"Utilisez le shortcode <code>[bzkshopping]</code> dans le corps d'un article, "
+"d'une page ou dans un widget pour afficher des produits automatiquement en "
+"fonction du contexte."
+
+#: views/help.php:1
+msgid ""
+"The attribute <code>keyword</code> allows you to manually force the product "
+"query. Example: <code>[bzkshopping keyword=\"drill\"]</code> will display "
+"drills."
+msgstr ""
+"L'attribut <code>keyword</code> permet de forcer manuellement la requête "
+"produits. Exemple : <code>[bzkshopping keyword=\"perceuse\"]</code> "
+"affichera des perceuses."
+
+#: views/help.php:1
+msgid ""
+"The attribute <code>count</code> allows to specify the number of products. "
+"Example: <code>[bzkshopping count=\"3\"]</code> will display 3 products."
+msgstr ""
+"L'attribut <code>count</code> permet de spécifier le nombre de produits. "
+"Exemple : <code>[bzkshopping count=\"3\"]</code> affichera 3 produits."
+
+#: views/help.php:1
+msgid ""
+"The attribute <code>template</code> allows to specify the design of the "
+"list. Example: <code>[bzkshopping template=\"box\"]</code> will display "
+"products in box mode."
+msgstr ""
+"L'attribut <code>template</code> permet de modifier le design de la liste. "
+"Exemple : <code>[bzkshopping template=\"box\"]</code> affichera des produits "
+"en mode boîte."
+
+#: views/help.php:1 views/widget_form.php:1
+#, php-format
+msgid "Possible values are : %s."
+msgstr "Les valeurs possibles sont : %s."
+
+#: views/help.php:1
+msgid ""
+"The attribute <code>merchants</code> allows to choose which merchants to "
+"display, and the order in which they are displayed. Example: "
+"<code>[bzkshopping merchants=\"ebay,amazon\"]</code> will display products "
+"from eBay and Amazon only."
+msgstr ""
+"L'attribut <code>merchants</code> permet de choisir les commerçants à "
+"afficher, et l'ordre dans lequel ils sont affichés. Exemple : "
+"<code>[bzkshopping merchants=\"ebay,amazon\"]</code> affichera uniquement "
+"des produits issus d'eBay et d'Amazon."
+
+#: views/help.php:1
+msgid ""
+"These attributes are cumulative. Example: <code>[bzkshopping keyword="
+"\"vacuum cleaner\" count=\"8\" template=\"grid\" merchants=\"amazon\"]</"
+"code> will display a grid of 8 vacuum cleaners from Amazon."
+msgstr ""
+"Ces attributs sont cumulables. Exemple : <code>[bzkshopping keyword="
+"\"aspirateur\" count=\"8\" template=\"grid\" merchants=\"amazon\"]</code> "
+"affichera une grille de 8 aspirateurs issus d'Amazon."
+
+#: views/meta_box.php:6
+msgid "Automatically display products BEFORE the content of this post/page?"
+msgstr ""
+"Afficher automatiquement des produits AVANT le contenu de cet article/page ?"
+
+#: views/meta_box.php:6
+#, php-format
+msgid "Default setting: %s"
+msgstr "Réglage par défaut : %s"
+
+#: views/meta_box.php:6
+msgid "Yes"
+msgstr "Oui"
+
+#: views/meta_box.php:6
+msgid "No"
+msgstr "Non"
+
+#: views/meta_box.php:6
+msgid "Automatically display products AFTER the content of this post/page?"
+msgstr ""
+"Afficher automatiquement des produits APRÈS le contenu de cet article/page ?"
+
+#: views/meta_box.php:6
+msgid "Keyword used to display products automatically on this post/page"
+msgstr ""
+"Mot-clé utilisé pour afficher des produits automatiquement sur cet article/"
+"page"
+
+#: views/meta_box.php:6
+msgid "Main title"
+msgstr "Titre principal"
+
+#: views/meta_box.php:6
+msgid "Merchants used to display products automatically on this post/page"
+msgstr ""
+"Marchands utilisés pour afficher des produits automatiquement sur cet "
+"article/page"
+
+#: views/options_page.php:11
+msgid "How does it work?"
+msgstr "Comment ça marche ?"
+
+#: views/widget_form.php:1
+msgid "Title:"
+msgstr "Titre :"
+
+#: views/widget_form.php:1
+msgid "Keyword:"
+msgstr "Mot-clé :"
+
+#: views/widget_form.php:1
+msgid "Count:"
+msgstr "Nombre de produits :"
+
+#: views/widget_form.php:1
+msgid "Template:"
+msgstr "Design de la liste :"
+
+#: views/widget_form.php:1
+msgid "Merchants:"
+msgstr "Marchands :"
+
+#~ msgid "Cdiscount FR (Awin)"
+#~ msgstr "Cdiscount FR"
+
+#~ msgid "Program <em>Cdiscount FR (6948)</em>."
+#~ msgstr "Cdiscount FR (6948)"
+
+#~ msgid "Cdiscount"
+#~ msgstr "Cdiscount"
+
+#~ msgid "Automatic mode (before)"
+#~ msgstr "Mode automatique (avant)"
+
+#~ msgid "RueDuCommerce FR"
+#~ msgstr "RueDuCommerce FR"
+
+#~ msgid "RueDuCommerce FR (6901)"
+#~ msgstr "RueDuCommerce FR (6901)"
+
+#~ msgid "RueDuCommerce"
+#~ msgstr "RueDuCommerce"
+
+#~ msgid ""
+#~ "Use the shortcode <code>[bzkshopping]</code> in the body of an article, "
+#~ "page or widget to display products automatically based on context.<br/"
+#~ "><br/> The attribute <code>keyword</code> allows you to manually force "
+#~ "the product query. Example: <code>[bzkshopping keyword=\"drill\"]</code> "
+#~ "will display drills.<br/> The attribute <code>count</code> allows to "
+#~ "specify the number of products. Example: <code>[bzkshopping count=\"3\"]</"
+#~ "code> will display 3 products.<br/> The attribute <code>template</code> "
+#~ "allows to specify the design of the list. Example: <code>[bzkshopping "
+#~ "template=\"box\"]</code> will display products in box mode. Possible "
+#~ "values are <code>grid</code> and <code>box</code>.<br/><br/> These "
+#~ "attributes are cumulative. Example: <code> [bzkshopping keyword=\"vacuum "
+#~ "cleaner\" count=\"8\" template=\"grid\"]</code> will display a grid of 8 "
+#~ "vacuum cleaners."
+#~ msgstr ""
+#~ "Utilisez le shortcode <code>[bzkshopping]</code> dans le corps d'un "
+#~ "article, d'une page ou dans un widget pour afficher des produits "
+#~ "automatiquement en fonction du contexte.<br/><br/> L'attribut "
+#~ "<code>keyword</code> permet de forcer manuellement la requête produits. "
+#~ "Exemple : <code>[bzkshopping keyword=\"perceuse\"]</code> affichera des "
+#~ "perceuses.<br/> L'attribut <code>count</code> permet de spécifier le "
+#~ "nombre de produits. Exemple : <code>[bzkshopping count=\"3\"]</code> "
+#~ "affichera 3 produits.<br/> L'attribut <code>template</code> permet de "
+#~ "modifier le design de la liste. Exemple : <code>[bzkshopping template="
+#~ "\"box\"]</code> affichera des produits en mode boîte. Les valeurs "
+#~ "possibles sont <code>grid</code> et <code>box</code>.<br/><br/> Ces "
+#~ "attributs sont cumulables. Exemple : <code>[bzkshopping keyword="
+#~ "\"aspirateur\" count=\"8\" template=\"grid\"]</code> affichera une grille "
+#~ "de 8 aspirateurs."
+
+#~ msgid "License"
+#~ msgstr "Licence"

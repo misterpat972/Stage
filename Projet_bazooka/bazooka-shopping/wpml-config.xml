@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wpml-config>
+	<custom-fields>
+		<custom-field action="copy-once">_bazooka_shopping_before</custom-field>
+		<custom-field action="copy-once">_bazooka_shopping_after</custom-field>
+		<custom-field action="translate">_bazooka_shopping_keyword</custom-field>
+		<custom-field action="copy-once">_bazooka_shopping_merchants</custom-field>
+	</custom-fields>
+	<admin-texts>
+		<key name="bazooka_shopping_before_post" />
+		<key name="bazooka_shopping_before_page" />
+		<key name="bazooka_shopping_after_post" />
+		<key name="bazooka_shopping_after_page" />
+		<key name="bazooka_shopping_count" />
+		<key name="bazooka_shopping_template" />
+		<key name="bazooka_shopping_color" />
+		<key name="bazooka_shopping_cta" />
+		<key name="bazooka_shopping_cloak" />
+		<key name="bazooka_shopping_amazon_tag" />
+		<key name="bazooka_shopping_amazon_api_key" />
+		<key name="bazooka_shopping_amazon_api_secret" />
+		<key name="bazooka_shopping_amazon_country" />
+		<key name="bazooka_shopping_amazon_tag_guest" />
+		<key name="bazooka_shopping_kelkoo_api_key" />
+		<key name="bazooka_shopping_kelkoo_api_country" />
+		<key name="bazooka_shopping_ebay_pubid" />
+		<key name="bazooka_shopping_ebay_campid" />
+		<key name="bazooka_shopping_ebay_country" />
+		<key name="bazooka_shopping_manomano_awin_affiliate_id" />
+		<key name="bazooka_shopping_manomano_awin_merchant_id" />
+	</admin-texts>      
+</wpml-config>

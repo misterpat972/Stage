@@ -1,0 +1,1 @@
+!function(t){t(function(){t("#bazooka-shopping-options-page").tabs({create:function(a,n){t(n.tab.find("a")).addClass("nav-tab-active")},activate:function(a,n){t(n.oldTab.find("a")).removeClass("nav-tab-active"),t(n.newTab.find("a")).addClass("nav-tab-active")}})})}(jQuery);

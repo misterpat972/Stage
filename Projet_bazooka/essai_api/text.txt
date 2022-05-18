@@ -1,0 +1,30 @@
+/*pat_test*/
+'patest' => __('Patest', 'bazooka-shopping'),
+
+
+
+/* start pat_test */
+    'patest_testid' => array('type' => 'string', 'default'  => ''),
+    'patest_merchant_id' => array('type' => 'string', 'default' => '18449'),
+    'patest_code' => array('type' => 'string', 'default' => ''),
+/* end test */
+
+
+
+
+
+
+
+
+/* start test pat */
+    add_settings_section('bazooka-shopping-patest', __(self::$merchants['patest'], 'bazooka-shopping'), function () {
+        echo __('<a href="http://knowledgedb.webosity.fr/" target="_blank">Get knowledgdb.webosity.fr</a>', 'bazooka-shopping');
+    }, 'bazooka-shopping');
+    add_settings_field('bazooka_shopping_patest_merchant_id', __('Merchant ID', 'bazooka-shopping'), function () {
+        echo '<input type="text" id="bazooka_shopping_patest_merchant_id" name="bazooka_shopping_patest_merchant_id" placeholder="XXXXXX" value="' . get_option('bazooka_shopping_patest_merchant_id') . '">';
+    }, 'bazooka-shopping', 'bazooka-shopping-patest', array('label_for' => 'bazooka_shopping_patest_merchant_id'));
+    add_settings_field('bazooka_shopping_patest_code', __('Code', 'bazooka-shopping'), function () {
+        echo '<textarea id="bazooka_shopping_patest_code" name="bazooka_shopping_patest_code" placeholder="XXXXXX" rows="10" cols="50">' . get_option('bazooka_shopping_patest_code') . '</textarea>';
+    }, 'bazooka-shopping', 'bazooka-shopping-patest', array('label_for' => 'bazooka_shopping_patest_code'));
+
+/* end test */
